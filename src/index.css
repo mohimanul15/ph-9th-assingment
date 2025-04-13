@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme{
+  --font-display: "Exo 2", "sans-serif";
+  --font-news: "Newsreader", "serif";
+
+  --color-main: #0066FF;
+  --color-secondary: #60953C;
+  --color-title: #000000;
+  --color-top_title: #666e7e;
+  --color-des: #252b2f;
+  
+}
