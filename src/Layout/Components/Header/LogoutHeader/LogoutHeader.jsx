@@ -9,8 +9,8 @@ const LogoutHeader = () => {
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link>Sign Up</Link></li>
-                    <li><Link>Login</Link></li>
+                    <li><Link to={'/login/signup'}>Sign Up</Link></li>
+                    <li><Link to={'/login'}>Login</Link></li>
                 </ul>
             </div>
         </header>

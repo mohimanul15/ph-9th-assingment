@@ -7,6 +7,9 @@ import Home from "../Pages/Home/Home";
 import Learning from '../Pages/Learning/Learning';
 import Tutorial from '../Pages/Tutorial/Tutorial';
 import About from '../Pages/About/About';
+import Login from '../Pages/Login/Login';
+import Signup from '../Pages/Signup/Signup';
+import Forget from "../Pages/Forget/Forget";
 
 const router = createBrowserRouter([
     {
@@ -33,7 +36,21 @@ const router = createBrowserRouter([
     },
     {
         path: 'login',
-        element: <LoginLayout></LoginLayout>
+        element: <LoginLayout></LoginLayout>,
+        children:[
+            {
+                path:'/login',
+                element:<Login></Login>
+            },
+            {
+                path: '/login/signup',
+                element: <Signup></Signup>
+            },
+            {
+                path: '/login/forget',
+                element: <Forget></Forget>
+            }
+        ]
     },
     {
         path: 'course',
