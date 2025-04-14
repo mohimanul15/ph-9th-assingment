@@ -1,11 +1,14 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const ApiContext = createContext(null);
 
 const AppContext = ({children}) => {
 
+    const [user, setUser] = useState(null)
+
     const name = {
-        test: "this is test context"
+        setUser,
+        user
     }
 
     return (

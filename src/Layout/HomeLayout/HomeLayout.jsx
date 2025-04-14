@@ -1,11 +1,13 @@
+import { Outlet } from 'react-router';
 import LoginHeader from '../Components/Header/LoginHeader/LoginHeader'
-
+import Footer from '../Components/Footer/Footer'
 
 const HomeLayout = () => {
     return (
         <>
             <LoginHeader></LoginHeader>
-            This is Home Layout
+            <Outlet></Outlet>
+            <Footer></Footer>
         </>
     );
 };
