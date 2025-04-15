@@ -1,11 +1,10 @@
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase.config";
-import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from "firebase/auth";
-import { useNavigate } from "react-router";
+import { GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 
 export const ApiContext = createContext(null);
 
-const AppContext = ({children}) => {
+const AppContext = ({ children }) => {
     const googleProvider = new GoogleAuthProvider();
 
     const [user, setUser] = useState(null);
@@ -15,27 +14,43 @@ const AppContext = ({children}) => {
         return signInWithPopup(auth, googleProvider);
     }
 
+    const signOutAll = () => {
+        return signOut(auth);
+    }
+
+    const checkUserEmailPassword = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+
+    const createUserEmailPass = (email,password) => {
+        return createUserWithEmailAndPassword(auth,email,password);
+    }
+
     const name = {
+        auth,
         wait,
         setUser,
         user,
-        googleLogin
+        googleLogin,
+        signOutAll,
+        checkUserEmailPassword,
+        createUserEmailPass
     }
 
-    useEffect(()=>{
-        const fetchUser = onAuthStateChanged(auth, (current)=>{
-            if(current){
+    useEffect(() => {
+        const fetchUser = onAuthStateChanged(auth, (current) => {
+            if (current) {
                 setUser(current);
                 setWait(false);
-            }else{
+            } else {
                 setUser(null);
                 setWait(false);
-            }    
+            }
         });
-        return () =>{
+        return () => {
             fetchUser()
         }
-    },[])
+    }, [])
 
     return (
         <ApiContext.Provider value={name}>
