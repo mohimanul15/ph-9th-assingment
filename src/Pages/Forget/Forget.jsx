@@ -29,7 +29,7 @@ const Forget = () => {
                 e.target.reset();
             })
             .catch(error => {
-                console.log(error);
+                document.getElementById('ErrMesseage').innerText = error?.message.split('(')[1].slice(0,-2).split('/')[1];
             })
     }
 
@@ -58,9 +58,9 @@ const Forget = () => {
                                     
                                     <div>
                                         <Link 
-                                            to={'/login/forget'} 
+                                            to={'/login/signup'} 
                                             className="link link-hover">
-                                                Forgot password?
+                                                Signup for new account?
                                         </Link>
                                     </div>
 
