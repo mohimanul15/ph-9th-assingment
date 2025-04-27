@@ -170,6 +170,7 @@ const Home = () => {
                             <div className="stat-value text-xl md:text-5xl">
                                 <CountUp
                                     end={31000}
+                                    enableScrollSpy
                                     delay={2}
                                     duration={4.7}
                                     decimal=',' />
@@ -181,6 +182,7 @@ const Home = () => {
                             <div className="stat-value text-xl md:text-5xl">
                                 <CountUp
                                     end={18000}
+                                    enableScrollSpy
                                     delay={3}
                                     duration={6.7}
                                     decimal=','
@@ -193,6 +195,7 @@ const Home = () => {
                             <div className="stat-value text-xl md:text-5xl">
                                 <CountUp
                                     end={10}
+                                    enableScrollSpy
                                     delay={4}
                                     duration={8.7}
                                     decimal=',' />
@@ -204,6 +207,7 @@ const Home = () => {
                             <div className="stat-value text-xl md:text-5xl">
                                 <CountUp
                                     end={200}
+                                    enableScrollSpy
                                     delay={6}
                                     duration={10.7}
                                     decimal=','
