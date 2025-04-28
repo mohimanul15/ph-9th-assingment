@@ -22,6 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/learning',
+                loader: () => fetch('/lesson.json'),
                 element: <Learning></Learning>
             },
             {

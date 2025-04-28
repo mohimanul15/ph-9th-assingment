@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "title": "Привет! Let's Talk Basics",
+      "level": "beginner",
+      "description": "Greetings, introductions, and essential phrases",
+      "word_count": 50,
+      "duration_min": 15,
+      "icon": "👋",
+      "tags": ["survival", "conversation"]
+    },
+    {
+      "id": 2,
+      "title": "Cyrillic Decoded: Read Russian in 7 Days",
+      "level": "beginner",
+      "description": "Master the alphabet with food labels, street signs, and memes",
+      "word_count": 33,
+      "duration_min": 30,
+      "icon": "🔤",
+      "tags": ["alphabet", "reading"]
+    },
+    {
+      "id": 3,
+      "title": "Survival Russian for Travelers",
+      "level": "beginner",
+      "description": "Transportation, directions, and hotel phrases",
+      "word_count": 75,
+      "duration_min": 20,
+      "icon": "✈️",
+      "tags": ["travel", "navigation"]
+    },
+    {
+      "id": 4,
+      "title": "Café Chatter: Order Like a Local",
+      "level": "intermediate",
+      "description": "Menus, payments, and food idioms",
+      "word_count": 60,
+      "duration_min": 25,
+      "icon": "☕",
+      "tags": ["food", "culture"]
+    },
+    {
+      "id": 5,
+      "title": "Slang Attack: From 'Круто' to 'Офигенно'",
+      "level": "intermediate",
+      "description": "Teen slang, internet abbreviations, and playful insults",
+      "word_count": 45,
+      "duration_min": 15,
+      "icon": "😎",
+      "tags": ["slang", "informal"]
+    },
+    {
+      "id": 6,
+      "title": "Shop 'Til You Drop – In Russian",
+      "level": "intermediate",
+      "description": "Bargaining, sizes, and clothing vocabulary",
+      "word_count": 55,
+      "duration_min": 20,
+      "icon": "🛍️",
+      "tags": ["shopping", "commerce"]
+    },
+    {
+      "id": 7,
+      "title": "Babushka Approved: Kitchen Russian",
+      "level": "advanced",
+      "description": "Cooking verbs, Soviet recipes, and grocery hacks",
+      "word_count": 80,
+      "duration_min": 30,
+      "icon": "🍳",
+      "tags": ["food", "culture"]
+    },
+    {
+      "id": 8,
+      "title": "Workplace Warrior: Office & Business Phrases",
+      "level": "advanced",
+      "description": "Emails, meetings, and professional etiquette",
+      "word_count": 90,
+      "duration_min": 35,
+      "icon": "💼",
+      "tags": ["business", "professional"]
+    },
+    {
+      "id": 9,
+      "title": "Russian Soul: Poetry & Swear Words",
+      "level": "advanced",
+      "description": "Pushkin quotes vs. street profanity (context matters!)",
+      "word_count": 40,
+      "duration_min": 25,
+      "icon": "🎭",
+      "tags": ["literature", "slang"]
+    },
+    {
+      "id": 10,
+      "title": "Soviet Throwback: USSR Pop Culture",
+      "level": "advanced",
+      "description": "Communist slogans, vintage cartoons, and retro slang",
+      "word_count": 50,
+      "duration_min": 30,
+      "icon": "🇷🇺",
+      "tags": ["history", "culture"]
+    }
+  ]
