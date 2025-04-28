@@ -6,6 +6,7 @@ import whyus2 from '../../assets/image/whyus2.png';
 import whyus3 from '../../assets/image/whyus3.png';
 import whyus4 from '../../assets/image/whyus4.png';
 import whyus5 from '../../assets/image/whyus5.png';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Home = () => {
 
@@ -216,6 +217,213 @@ const Home = () => {
                             <div className="stat-title text-white text-base md:text-2xl mt-3">Words</div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Accordion Q/A */}
+            <section className='py-6 md:py-16 container max-w-4xl mx-auto px-2'>
+
+                <div className='pb-10 text-center'>
+                    <h4 className='font-bold text-base md:text-lg uppercase text-neutral-600 text-center'>FAQ</h4>
+
+                    <h2 className='font-extrabold text-black text-xl md:text-2xl lg:text-5xl max-md:text-center'>Frequently Asked Question</h2>
+                </div>
+
+                <div className="collapse bg-base-100 border border-base-300 my-2">
+                    <input type="radio" name="my-accordion-1" defaultChecked />
+
+                    <div className="collapse-title font-semibold">
+                        How is Lingo Bingo different from other language apps?
+                    </div>
+
+                    <div className="collapse-content text-sm">
+                        We combine science-backed learning with addictive gamification: <br />
+
+                        Curated vocabulary sorted by real-world usefulness (not random words) <br />
+
+                        Bingo-style games and challenges that make practice fun <br />
+
+                        Cultural insights (slang, etiquette) most apps ignore <br />
+
+                        Pronunciation tools with native speaker audio and voice comparison
+                    </div>
+
+                </div>
+
+                <div className="collapse bg-base-100 border border-base-300 my-2">
+                    <input type="radio" name="my-accordion-1" />
+
+                    <div className="collapse-title font-semibold">
+                        Do I need to know Cyrillic to start?
+                    </div>
+
+                    <div className="collapse-content text-sm">
+                        Not at all! We teach Cyrillic gradually: <br />
+                        ✔ Lessons include English transcriptions (e.g., "спасибо" → "spa-see-ba") <br />
+                        ✔ Interactive alphabet games to master letters fast <br />
+                        ✔ 80% of beginners read Cyrillic confidently within 2 weeks
+                    </div>
+
+                </div>
+
+                <div className="collapse bg-base-100 border border-base-300 my-2">
+                    <input type="radio" name="my-accordion-1" />
+
+                    <div className="collapse-title font-semibold">
+                        How much time should I spend daily?
+                    </div>
+
+                    <div className="collapse-content text-sm">
+                        Just 5-10 minutes/day works! Our system is designed for: <br />
+
+                        <ul>
+                            <li>Micro-lessons during commutes or breaks</li>
+
+                            <li>Smart reminders to keep you consistent</li>
+
+                            <li>Offline mode for learning anywhere</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div className="collapse bg-base-100 border border-base-300 my-2">
+                    <input type="radio" name="my-accordion-1" />
+
+                    <div className="collapse-title font-semibold">
+                        Can I really learn Russian for free?
+                    </div>
+
+                    <div className="collapse-content text-sm">
+                        Yes! Our free plan includes: <br />
+
+                        <ul>
+                            <li>10+ beginner lessons (200+ essential words)</li>
+
+                            <li>Daily challenges and pronunciation tools</li>
+
+                            <li>Access to learner community forums
+                                Premium unlocks advanced content, but you’ll never lose free features.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            {/* Support */}
+            <section className='py-6 md:py-16 container max-w-6xl mx-auto px-3'>
+
+                <div className='pb-8 text-center'>
+                    <h3 className='font-extrabold text-neutral-900 text-lg md:text-2xl lg:text-4xl max-md:text-center'>What We Offer</h3>
+                </div>
+
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+
+                    <div className='bg-blue-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-blue-200 hover:shadow-2xl'>
+
+                        <div className='min-h-32 relative'>
+                            <DotLottieReact
+                                src='https://lottie.host/7d5ae351-daaa-466b-a5e3-3c0cf951e216/2NBmjft4cG.lottie'
+                                loop
+                                autoplay
+                                className='max-w-4xl absolute -left-25 -top-12' />
+                        </div>
+
+                        <div className='relative'>
+
+                            <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-2xl max-md:text-center pb-3'>
+                                Genuine literacy for every student.
+                            </h2>
+
+                            <p className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>
+                                Every student can achieve a lofty level of literacy! Whether you teach multilingual learners, advanced classes, or students who are struggling, we'll meet each individual where they are and adapt to their unique needs.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div className='bg-slate-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-slate-200 hover:shadow-2xl'>
+
+                        <div className='min-h-32 relative'>
+                            <DotLottieReact
+                                src='https://lottie.host/d2e0911b-350d-454e-8ad3-5768f1557930/wQaYeFUow7.lottie'
+                                loop
+                                autoplay
+                                className='max-w-4xl absolute -left-25 -top-12' />
+                        </div>
+
+                        <div className='relative'>
+
+                            <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-2xl max-md:text-center pb-3'>
+                                Designed by AI
+                            </h2>
+
+                            <p className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>
+                                At Lingo Bingo, we harness the power of artificial intelligence to create a smarter, more personalized way to learn Russian. Our AI-driven platform analyzes your progress, adapts to your strengths and weaknesses, and delivers tailored lessons that evolve with you.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div className='bg-slate-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-slate-200 hover:shadow-2xl'>
+
+                        <div className='min-h-32 relative'>
+                            <DotLottieReact
+                                src='https://lottie.host/b9324b10-8587-470b-a318-036eb4e7699d/iT7KrjKBfP.lottie'
+                                loop
+                                autoplay
+                                className='max-w-4xl absolute -left-25 -top-12' />
+                        </div>
+
+                        <div className='relative'>
+
+                            <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-2xl max-md:text-center pb-3'>
+                                Innovative Learning: Smarter & Faster.
+                            </h2>
+
+                            <p className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>
+                                At Lingo Bingo, we’ve reimagined language learning with cutting-edge techniques that make mastering Russian easier, faster, and more fun than traditional methods.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div className='bg-blue-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-blue-200 hover:shadow-2xl'>
+
+                        <div className='min-h-32 relative'>
+                            <DotLottieReact
+                                src='https://lottie.host/26cdfc69-f1e9-4ac5-a02e-b9cf356b6671/PVGuBljJ98.lottie'
+                                loop
+                                autoplay
+                                className='max-w-4xl absolute -left-25 -top-12' />
+                        </div>
+
+                        <div className='relative'>
+
+                            <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-2xl max-md:text-center pb-3'>
+                                Real-World Words
+                            </h2>
+
+                            <p className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>
+                                Tired of memorizing useless vocabulary? At Lingo Bingo, we only teach you practical, high-frequency Russian that natives use daily. No textbook fluff – just the language you need for real life.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div className='pt-10 w-full flex justify-center'>
+                    <button className='btn btn-primary uppercase text-white text-lg font-bold max-w-fit shadow-2xl shadow-blue-300 mt-3 max-md:mx-auto'>Let's Start Now</button>
                 </div>
             </section>
 
