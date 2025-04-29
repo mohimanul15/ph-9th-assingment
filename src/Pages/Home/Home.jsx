@@ -20,6 +20,7 @@ const Home = () => {
 
     return (
         <div>
+            
             <main className='bg-linear-to-br from-blue-600 to-purple-800'>
                 <section className='container mx-auto max-w-7xl space-y-10 md:flex md:gap-10 px-3 py-4 md:py-18'>
 

@@ -29,7 +29,7 @@ const Lessons = ({ lessonData }) => {
 
                     <hr className='text-white'/>
 
-                    <div className='flex items-center justify-between'>
+                    <div className='flex items-center justify-between mt-3'>
                         <div className='flex gap-3 justify-baseline'>
                             {
                                 tags.map((ele, idx) => {
