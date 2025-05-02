@@ -30,7 +30,7 @@ const Lessons = ({ lessonData }) => {
                     <hr className='text-white'/>
 
                     <div className='flex items-center justify-between mt-3'>
-                        <div className='flex gap-3 justify-baseline'>
+                        <div className='flex gap-3 justify-baseline flex-wrap'>
                             {
                                 tags.map((ele, idx) => {
                                     return <div key={idx + ele} className='px-3 py-1 bg-[#ffffff55] backdrop-blur-3xl rounded-2xl text-blue-800 font-medium'>{ele}</div>

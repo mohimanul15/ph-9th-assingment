@@ -1,0 +1,230 @@
+{
+    "course": "Russian Vocabulary Accelerator",
+    "lessons": [
+      {
+        "id": 1,
+        "title": "Привет! Let’s Talk Basics",
+        "level": "beginner",
+        "description": "Master essential greetings and introductions",
+        "videos": [
+          {
+            "id": "SJ18HC9EyEE",
+            "title": "Learn Russian - How to Greet People in Russian",
+            "channel": "Learn Russian with RussianPod101.com",
+            "url": "https://www.youtube.com/watch?v=SJ18HC9EyEE",
+            "key_moment": "How to Greet People in Russian"
+          },
+          {
+            "id": "hrnOcBAMCN4",
+            "title": "50 conversational Russian phrases every beginner needs",
+            "channel": "Be Fluent in Russian",
+            "url": "https://www.youtube.com/watch?v=hrnOcBAMCN4",
+            "key_moment": "Russian phrases every beginner needs"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Cyrillic Decoded in 1 Hour",
+        "level": "beginner",
+        "description": "Read Russian signs and menus confidently",
+        "videos": [
+          {
+            "id": "WdZlfU9W-z0",
+            "title": "Russian Alphabet for Beginners - Easy guide!",
+            "channel": "Be Fluent in Russian",
+            "url": "https://www.youtube.com/watch?v=WdZlfU9W-z0",
+            "key_moment": "Russian Alphabet for Beginners"
+          },
+          {
+            "id": "3YXwDZS5Y-c",
+            "title": "Street Sign Reading Practice",
+            "channel": "Russian Plus",
+            "url": "https://www.youtube.com/watch?v=3YXwDZS5Y-c",
+            "key_moment": "2:15 - Real-world examples"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Survival Russian for Travelers",
+        "level": "beginner",
+        "description": "Navigate airports, hotels, and transport",
+        "videos": [
+          {
+            "id": "Y5t1Kc5JgT4",
+            "title": "Airport Vocabulary",
+            "channel": "Easy Russian",
+            "url": "https://www.youtube.com/watch?v=Y5t1Kc5JgT4",
+            "key_moment": "3:45 - Ticket buying dialogue"
+          },
+          {
+            "id": "ZJ7XQdQ5Z8M",
+            "title": "Asking Directions in Russian",
+            "channel": "Real Russian Club",
+            "url": "https://www.youtube.com/watch?v=ZJ7XQdQ5Z8M",
+            "key_moment": "1:10 - Gestures locals use"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Café Chatter: Order Like a Local",
+        "level": "intermediate",
+        "description": "Master menus, payments, and food idioms",
+        "videos": [
+          {
+            "id": "5rAqBRXszUU",
+            "title": "Restaurant Role-Play",
+            "channel": "Russian Progress",
+            "url": "https://www.youtube.com/watch?v=5rAqBRXszUU",
+            "key_moment": "4:20 - Dietary requests"
+          },
+          {
+            "id": "9ZJ6ZkK7GkI",
+            "title": "Russian Food Idioms",
+            "channel": "NFKRZ",
+            "url": "https://www.youtube.com/watch?v=9ZJ6ZkK7GkI",
+            "key_moment": "0:55 - 'Finger-licking good'"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Slang Attack: From Круто to Офигенно",
+        "level": "intermediate",
+        "description": "Learn youth slang and internet abbreviations",
+        "videos": [
+          {
+            "id": "2jYzl_5gT4w",
+            "title": "Modern Russian Slang",
+            "channel": "Varlamov",
+            "url": "https://www.youtube.com/watch?v=2jYzl_5gT4w",
+            "key_moment": "7:30 - Gen Z slang"
+          },
+          {
+            "id": "7Sd93kGc3qI",
+            "title": "Internet Abbreviations",
+            "channel": "Russian with Dasha",
+            "url": "https://www.youtube.com/watch?v=7Sd93kGc3qI",
+            "key_moment": "0:45 - 'спс' vs 'пж'"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Shop 'Til You Drop – In Russian",
+        "level": "intermediate",
+        "description": "Bargaining, sizes, and clothing vocabulary",
+        "videos": [
+          {
+            "id": "JY0l3k3tRnA",
+            "title": "Bargaining at Russian Markets",
+            "channel": "Russian with Albina",
+            "url": "https://www.youtube.com/watch?v=JY0l3k3tRnA",
+            "key_moment": "2:50 - Price negotiation"
+          },
+          {
+            "id": "4qZ3Q5Q5Q5Q",
+            "title": "Clothing Sizes Guide",
+            "channel": "Russian Grammar",
+            "url": "https://www.youtube.com/watch?v=4qZ3Q5Q5Q5Q",
+            "key_moment": "1:15 - Fitting room phrases"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Babushka Approved: Kitchen Russian",
+        "level": "advanced",
+        "description": "Cooking verbs and Soviet-era recipes",
+        "videos": [
+          {
+            "id": "Q5Q5Q5Q5Q5Q",
+            "title": "Cooking Verbs Demystified",
+            "channel": "Russian Cooking Show",
+            "url": "https://www.youtube.com/watch?v=Q5Q5Q5Q5Q5Q",
+            "key_moment": "3:10 - Pelmeni recipe"
+          },
+          {
+            "id": "Q5Q5Q5Q5Q5Q",
+            "title": "Soviet Salad History",
+            "channel": "Bald and Bankrupt",
+            "url": "https://www.youtube.com/watch?v=Q5Q5Q5Q5Q5Q",
+            "key_moment": "5:25 - Olivier salad story"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Workplace Warrior: Business Russian",
+        "level": "advanced",
+        "description": "Emails, meetings, and professional etiquette",
+        "videos": [
+          {
+            "id": "Q5Q5Q5Q5Q5Q",
+            "title": "Business Email Formulas",
+            "channel": "Business Russian",
+            "url": "https://www.youtube.com/watch?v=Q5Q5Q5Q5Q5Q",
+            "key_moment": "2:30 - Formal openings"
+          },
+          {
+            "id": "Q5Q5Q5Q5Q5Q",
+            "title": "Job Interview Phrases",
+            "channel": "Russian with Anastasia",
+            "url": "https://www.youtube.com/watch?v=Q5Q5Q5Q5Q5Q",
+            "key_moment": "4:15 - Salary negotiation"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Russian Soul: Poetry & Swear Words",
+        "level": "advanced",
+        "description": "From Pushkin to street profanity",
+        "videos": [
+          {
+            "id": "Q5Q5Q5Q5Q5Q",
+            "title": "Pushkin's Fairy Tales",
+            "channel": "Russian Literature",
+            "url": "https://www.youtube.com/watch?v=Q5Q5Q5Q5Q5Q",
+            "key_moment": "1:45 - Animated readings"
+          },
+          {
+            "id": "Q5Q5Q5Q5Q5Q",
+            "title": "Swear Words Explained",
+            "channel": "NFKRZ",
+            "url": "https://www.youtube.com/watch?v=Q5Q5Q5Q5Q5Q",
+            "key_moment": "3:20 - Context matters!"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Soviet Throwback: USSR Pop Culture",
+        "level": "advanced",
+        "description": "Communist slogans, vintage cartoons, and retro slang",
+        "videos": [
+          {
+            "id": "Q5Q5Q5Q5Q5Q",
+            "title": "Ну, Погоди! Cartoon Analysis",
+            "channel": "Soviet Animation",
+            "url": "https://www.youtube.com/watch?v=Q5Q5Q5Q5Q5Q",
+            "key_moment": "7:10 - Hidden meanings"
+          },
+          {
+            "id": "Q5Q5Q5Q5Q5Q",
+            "title": "Communist Slogans Decoded",
+            "channel": "Varlamov",
+            "url": "https://www.youtube.com/watch?v=Q5Q5Q5Q5Q5Q",
+            "key_moment": "2:45 - Modern usage"
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "total_hours": 15,
+      "completion_badge": "russian-vocab-champion",
+      "last_updated": "2023-11-20"
+    }
+  }
