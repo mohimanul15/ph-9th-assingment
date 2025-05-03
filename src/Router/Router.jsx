@@ -10,6 +10,7 @@ import About from '../Pages/About/About';
 import Login from '../Pages/Login/Login';
 import Signup from '../Pages/Signup/Signup';
 import Forget from "../Pages/Forget/Forget";
+import Auth from "../Pages/Auth/Auth";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
             {
                 path: '/tutorial',
                 loader: () => fetch('/tutorials.json'),
-                element: <Tutorial></Tutorial>
+                element: <Auth><Tutorial></Tutorial></Auth>
             },
             {
                 path: '/about',

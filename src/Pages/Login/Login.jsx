@@ -8,7 +8,9 @@ import bground from '../../assets/image/bg1.png';
 
 const Login = () => {
 
+    const locData = useLocation();
     const navigate = useNavigate();
+
     const { checkUserEmailPassword: emailPassCheck, googleLogin, setUser, user, wait } = useContext(ApiContext);
 
     const bgStyles = {
@@ -51,7 +53,7 @@ const Login = () => {
         }
     }
 
-    user && navigate('/');
+    user && locData.state?navigate(locData.state):user && navigate('/');
 
     return (
         <>

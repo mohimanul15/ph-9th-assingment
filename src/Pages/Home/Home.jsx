@@ -117,7 +117,7 @@ const Home = () => {
                         <div className='flex-1/2 flex flex-col justify-center gap-3'>
                             <h4 className='font-bold text-base md:text-lg uppercase text-neutral-600 text-left max-md:text-center'>Accent Based</h4>
                             <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-3xl max-md:text-center'>Perfect Your Russian Accent</h2>
-                            <p className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>
+                            <div className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>
                                 <ul>
                                     <li>
                                         Learn high-frequency words first (master 300 words = understand 65% of daily conversations)
@@ -127,7 +127,7 @@ const Home = () => {
                                         Real-life scenario modules: airport navigation, business meetings, dating
                                     </li>
                                 </ul>
-                            </p>
+                            </div>
                         </div>
 
                         <div className='flex-1/2 place-items-center'>
