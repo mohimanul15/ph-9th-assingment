@@ -11,6 +11,7 @@ const AppContext = ({ children }) => {
     const [wait, setWait] = useState(true);
 
     const googleLogin = () => {
+        setWait(false);
         return signInWithPopup(auth, googleProvider);
     }
 
@@ -19,10 +20,12 @@ const AppContext = ({ children }) => {
     }
 
     const checkUserEmailPassword = (email, password) => {
+        setWait(false);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const createUserEmailPass = (email,password) => {
+        setWait(false);
         return createUserWithEmailAndPassword(auth,email,password);
     }
 

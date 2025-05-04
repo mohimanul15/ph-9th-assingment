@@ -1,18 +1,24 @@
 import React, { useContext } from 'react';
 import { ApiContext } from '../../AppContext/AppContext';
 import { Navigate, useLocation } from 'react-router';
+import Spinner from '../../Layout/Components/Spinner/Spinner';
 
-const Auth = ({children}) => {
+const Auth = ({ children }) => {
 
     const uriLoc = useLocation();
 
-    const {user} = useContext(ApiContext);
-    
-    if(user){
+    const { user, wait } = useContext(ApiContext);
+
+    if (user) {
         return (children);
     }
-    else{
-        return <Navigate state={uriLoc.pathname} to={'/login'}></Navigate>
+    else {
+        if(wait){
+            return <Spinner></Spinner>
+        }
+        else {
+            return <Navigate state={uriLoc.pathname} to={'/login'}></Navigate>
+        }
     }
 };
 

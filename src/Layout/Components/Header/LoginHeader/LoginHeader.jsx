@@ -14,6 +14,9 @@ const LoginHeader = () => {
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/learning'}>Start Learning</NavLink></li>
         <li><NavLink to={'/tutorial'}>Tutorials</NavLink></li>
+        {
+            user && <li><NavLink to={'/lesson'}>Lesson</NavLink></li>
+        }
         <li><NavLink to={'/about'}>About Us</NavLink></li>
     </>
 

@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import LoginLayout from '../Layout/LoginLayout/LoginLayout';
-import CourseLayout from '../Layout/CourseLayout/CourseLayout';
 import HomeLayout from '../Layout/HomeLayout/HomeLayout';
 import ErrorLayout from '../Layout/ErrorLayout/ErrorLayout';
 import Home from "../Pages/Home/Home";
@@ -11,6 +10,8 @@ import Login from '../Pages/Login/Login';
 import Signup from '../Pages/Signup/Signup';
 import Forget from "../Pages/Forget/Forget";
 import Auth from "../Pages/Auth/Auth";
+import Lesson from "../Pages/Lesson/Lesson";
+import Vocab from "../Pages/Vocab/Vocab";
 
 const router = createBrowserRouter([
     {
@@ -32,8 +33,18 @@ const router = createBrowserRouter([
                 element: <Auth><Tutorial></Tutorial></Auth>
             },
             {
+                path: '/lesson',
+                loader: () => fetch('/words.json'),
+                element: <Auth><Lesson></Lesson></Auth>,
+            },
+            {
                 path: '/about',
                 element: <About></About>
+            },
+            {
+                path: '/lesson/:lesson_id',
+                loader: () => fetch('/words.json'),
+                element: <Auth><Vocab></Vocab></Auth>
             }
         ]
     },
@@ -54,10 +65,6 @@ const router = createBrowserRouter([
                 element: <Forget></Forget>
             }
         ]
-    },
-    {
-        path: 'course',
-        element:<CourseLayout></CourseLayout>
     },
     {
         path: '*',

@@ -7,7 +7,7 @@ import Video from '../../Layout/Components/Video/Video';
 const Tutorial = () => {
 
     const data = useLoaderData();
-    console.log(data.lessons)
+    // console.log(data.lessons)
 
     const [current, setCurrent] = useState(data.lessons[0]);
 
