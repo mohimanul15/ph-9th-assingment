@@ -1,8 +1,11 @@
 import { Link } from 'react-router';
 import Tags from '../Tags/Tags';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { GetLocalStorageWord } from '../../../LocalStorage/LocalStorage';
 
 const WordLesson = ({ lessonData, currentLesson }) => {
+
+    const [prog, setProg] = useState(0);
 
     const lesData = lessonData.filter(ele => {
         return ele.lesson_no === currentLesson;
@@ -12,6 +15,19 @@ const WordLesson = ({ lessonData, currentLesson }) => {
 
     const difficulty = [...new Set(lesData.map(ele => ele.difficulty))]
     // console.log(lesData);
+
+    useEffect(() => {
+        const updateLessonEffect = () => {
+            const learnLesson = GetLocalStorageWord();
+            const currentLessonWId = [...new Set(lesData.map(ele => ele.id))];
+
+            const matchItem = currentLessonWId.filter(ele => learnLesson.includes(ele)).length;
+
+            setProg(matchItem);
+        }
+
+        return updateLessonEffect()
+    }, [])
 
     return (
         <div className='flex gap-3 p-5 max-md:flex-col'>
@@ -39,7 +55,7 @@ const WordLesson = ({ lessonData, currentLesson }) => {
                 <div className='p-1'>
                     <div className='flex flex-wrap items-center'>
                         {
-                            partsOfSpech.map(ele => <Tags tags={ele}></Tags>)
+                            partsOfSpech.map((ele,idk) => <Tags tags={ele} key={idk}></Tags>)
                         }
                     </div>
 
@@ -50,14 +66,19 @@ const WordLesson = ({ lessonData, currentLesson }) => {
                     <div className='flex flex-wrap items-center my-3'>
                         Understanding Level:
                         {
-                            difficulty.map(ele => <Tags tags={ele}></Tags>)
+                            difficulty.map((ele,idk) => <Tags tags={ele} key={idk}></Tags>)
                         }
                     </div>
                 </div>
                 <div className='flex items-center gap-3 justify-between'>
-                    Progress: <input type="range" />
+                    Progress: 
+                        <progress 
+                            className="progress progress-accent" 
+                            value={prog} 
+                            max={lesData.length}>
+                            </progress>
 
-                    x / {lesData.length}
+                    {prog} / {lesData.length}
                 </div>
             </div>
         </div>
