@@ -1,8 +1,10 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router';
 
 const Lessons = ({ lessonData }) => {
 
-    const { id, description, level, title, tags,word_count,icon ,duration_min: time} = lessonData;
+    const { id, description, level, title, tags, word_count, icon, duration_min: time } = lessonData;
 
     // console.log(lessonData);
 
@@ -18,7 +20,7 @@ const Lessons = ({ lessonData }) => {
                         {description}
                     </p>
 
-                    <hr  className='text-white'/>
+                    <hr className='text-white' />
 
                     <div className='flex justify-center w-full items-center'>
                         <p>{level}</p>
@@ -27,7 +29,7 @@ const Lessons = ({ lessonData }) => {
                         <p className='text-end'>{icon}</p>
                     </div>
 
-                    <hr className='text-white'/>
+                    <hr className='text-white' />
 
                     <div className='flex items-center justify-between mt-3'>
                         <div className='flex gap-3 justify-baseline flex-wrap'>
@@ -38,7 +40,11 @@ const Lessons = ({ lessonData }) => {
                             }
                         </div>
                         <div className="justify-end card-actions">
-                            <button className="btn btn-primary">Start Now</button>
+                            <Link to={'/lesson/'+id}>
+                                <button className="btn btn-primary">
+                                    Start Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

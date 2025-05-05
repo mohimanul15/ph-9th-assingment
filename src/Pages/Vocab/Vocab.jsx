@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import SingleVoc from '../../Layout/Components/SingleVoc/SingleVoc';
 import { GetLocalStorageWord } from '../../LocalStorage/LocalStorage';
+import { Helmet } from 'react-helmet';
 
 const Vocab = () => {
 
@@ -16,7 +17,6 @@ const Vocab = () => {
     })
 
     const updateLesson = () => {
-        console.log('exec');
         const learnLesson = GetLocalStorageWord();
         const currentLessonWId = [...new Set(wordLesson.map(ele => ele.id))];
 
@@ -27,7 +27,6 @@ const Vocab = () => {
 
     useEffect(() => {
         const updateLessonEffect = () => {
-            console.log('exec');
             const learnLesson = GetLocalStorageWord();
             const currentLessonWId = [...new Set(wordLesson.map(ele => ele.id))];
 
@@ -43,6 +42,11 @@ const Vocab = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>Lesson : {param.lesson_id} | Lingo Bingo</title>
+            </Helmet>
+
             {/* Page Title */}
             <section className='bg-linear-to-br from-blue-800 to-purple-900 py-20'>
                 <h2 className='font-extrabold text-white text-xl md:text-2xl lg:text-5xl text-center'>
@@ -67,7 +71,7 @@ const Vocab = () => {
                 <div className='container my-3 py-4 max-w-6xl mx-auto place-items-center bg-slate-100 rounded-2xl'>
                     {
                         wordLesson.map(ele => {
-                            return <SingleVoc dataObj={ele} key={ele.id} updateLesson={updateLesson}></SingleVoc>
+                            return <SingleVoc dataObj={ele} key={ele.id} wordLesson={wordLesson} updateLesson={updateLesson}></SingleVoc>
                         })
                     }
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
 import WordLesson from '../../Layout/Components/WordLesson/WordLesson';
+import { Helmet } from 'react-helmet';
 
 const Lesson = () => {
 
@@ -12,6 +13,11 @@ const Lesson = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>Lessons | Lingo Bingo</title>
+            </Helmet>
+
             {/* Page Title */}
             <section className='bg-linear-to-br from-blue-800 to-purple-900 py-20'>
                 <h2 className='font-extrabold text-white text-xl md:text-2xl lg:text-5xl text-center'>
@@ -28,7 +34,7 @@ const Lesson = () => {
                 <div className='m-5 container'>
                     <div className='bg-slate-200 rounded-xl p-4 w-full place-items-center'>
                         {
-                            lesTotal.map((ele,idk) => <WordLesson lessonData={data} currentLesson={ele} key={idk}></WordLesson>)
+                            lesTotal.map((ele, idk) => <WordLesson lessonData={data} currentLesson={ele} key={idk}></WordLesson>)
                         }
                     </div>
                 </div>

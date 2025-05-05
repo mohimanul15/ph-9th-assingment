@@ -7,6 +7,7 @@ import whyus3 from '../../assets/image/whyus3.png';
 import whyus4 from '../../assets/image/whyus4.png';
 import whyus5 from '../../assets/image/whyus5.png';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
 
@@ -20,6 +21,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title> Home | Lingo Bingo</title>
+            </Helmet>
             
             <main className='bg-linear-to-br from-blue-600 to-purple-800'>
                 <section className='container mx-auto max-w-7xl space-y-10 md:flex md:gap-10 px-3 py-4 md:py-18'>
