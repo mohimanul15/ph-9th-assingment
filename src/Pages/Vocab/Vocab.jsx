@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import { Link, useLoaderData, useParams } from 'react-router';
 import SingleVoc from '../../Layout/Components/SingleVoc/SingleVoc';
 import { GetLocalStorageWord } from '../../LocalStorage/LocalStorage';
 import { Helmet } from 'react-helmet';
@@ -48,7 +48,7 @@ const Vocab = () => {
             </Helmet>
 
             {/* Page Title */}
-            <section className='bg-linear-to-br from-blue-800 to-purple-900 py-20'>
+            <section className='bg-linear-to-br from-blue-800 to-purple-900 pb-20 pt-40'>
                 <h2 className='font-extrabold text-white text-xl md:text-2xl lg:text-5xl text-center'>
                     Let's Get Rolling....
                     <br />Lesson - {param.lesson_id}
@@ -68,14 +68,25 @@ const Vocab = () => {
                     <progress className="progress progress-primary" value={prog} max={wordLesson.length}></progress>
                 </div>
 
-                <div className='container my-3 py-4 max-w-6xl mx-auto place-items-center bg-slate-100 rounded-2xl'>
-                    {
-                        wordLesson.map(ele => {
-                            return <SingleVoc dataObj={ele} key={ele.id} wordLesson={wordLesson} updateLesson={updateLesson}></SingleVoc>
-                        })
-                    }
+                <div className='mx-4'>
+                    <div className='container my-3 py-4 max-w-6xl mx-auto place-items-center bg-slate-100 rounded-2xl'>
+                        {
+                            wordLesson.map(ele => {
+                                return <SingleVoc dataObj={ele} key={ele.id} wordLesson={wordLesson} updateLesson={updateLesson}></SingleVoc>
+                            })
+                        }
+                    </div>
+
                 </div>
             </section>
+
+            <div className='container flex justify-center mx-auto py-8'>
+                <Link to={'/lesson'}>
+                    <button className='uppercase btn btn-primary shadow-2xl hover:shadow-blue-400 duration-500'>
+                        Back to Lesson
+                    </button>
+                </Link>
+            </div>
         </div>
     );
 };

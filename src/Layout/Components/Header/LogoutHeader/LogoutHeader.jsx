@@ -3,7 +3,7 @@ import logo from '../../../../assets/logo.png';
 
 const LogoutHeader = () => {
     return (
-        <header className="navbar bg-[#FFFFFFAA] shadow-sm sticky top-0 backdrop-blur-md">
+        <header className="navbar bg-[#FFFFFF40] z-10 shadow-sm sticky top-0 backdrop-blur-sm -mb-20">
             <div className="flex-1">
                 <Link to={'/'}><img src={logo} alt="Site Logo" className='max-h-16'/></Link>
             </div>

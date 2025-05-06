@@ -3,7 +3,7 @@ import YouTube from 'react-youtube';
 
 const Video = ({ dataVid }) => {
 
-    console.log(dataVid);
+    // console.log(dataVid);
 
     const options = {
         width: '100%',

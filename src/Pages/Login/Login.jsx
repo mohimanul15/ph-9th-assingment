@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGoogle } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
 import { ApiContext } from '../../AppContext/AppContext';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { Helmet } from 'react-helmet';
 import bground from '../../assets/image/bg1.png';
+import { ToastContainer } from 'react-toastify';
+import { InvalidUserOrPass, ProvideValidEmailPassword } from '../../ToastPop/ToastPop';
 
 const Login = () => {
 
@@ -40,20 +41,30 @@ const Login = () => {
         const email = formdata.get('email');
         const password = formdata.get('pass');
 
+        if(!email || !password){
+            ProvideValidEmailPassword();
+            return
+        }
+
         if (email !== null && password !== null) {
             emailPassCheck(email, password)
                 .then(res => {
-                    console.log(res);
+                    setUser(res.user);
                 })
                 .catch(error => {
-                    document.getElementById('ErrMesseage').innerText = error.message.split('(')[1].slice(0, -2);
+                    if(error.code.includes('invalid')){
+                        InvalidUserOrPass();
+                    }
                 })
         } else {
-            console.log('Please enter valid email and password')
+            ProvideValidEmailPassword();
         }
     }
 
-    user && locData.state?navigate(locData.state):user && navigate('/');
+    if(user){
+        user && locData?.state?navigate(locData.state):user && navigate('/');
+    }
+
 
     return (
         <>
@@ -98,6 +109,8 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+
+            <ToastContainer />
         </>
     );
 };

@@ -17,15 +17,17 @@ const SingleVoc = ({ dataObj, updateLesson, wordLesson }) => {
         example
     } = dataObj;
 
-    function pronounceWord(word) {
-        const utterance = new SpeechSynthesisUtterance(word);
+    const pronounceWord = (clickedWord, saveLocal = false) => {
+        const utterance = new SpeechSynthesisUtterance(clickedWord);
         utterance.lang = 'ru-RU'; // Russian
         window.speechSynthesis.speak(utterance);
 
         // Setting the data to localStorage
-        SetLocalStorageWord(id);
-        setLearn(true);
-        updateLesson();
+        if (saveLocal) {
+            SetLocalStorageWord(id);
+            setLearn(true);
+            updateLesson();
+        }
     }
 
     useEffect(() => {
@@ -62,125 +64,145 @@ const SingleVoc = ({ dataObj, updateLesson, wordLesson }) => {
 
 
         document.getElementById('wId').innerText = modWord.word;
+        document.getElementById('wIdPro').innerText = '( ' + modWord.pronunciation + ' )';
         document.getElementById('wMean').innerText = modWord.meaning;
         document.getElementById('wTs').innerText = modWord.when_to_say;
         document.getElementById('ex1st').innerText = example1st;
         document.getElementById('exMid').innerText = exampleMiddle;
         document.getElementById('exLst').innerText = exampleLast;
 
-console.log(modWord);
+        // console.log(modWord);
 
-modal.showModal();
+        modal.showModal();
     }
 
-// console.log(dataObj);
-return (
-    <div
-        className={`my-2 rounded-2xl border-2 border-blue-500 flex flex-row gap-4 px-4 items-center justify-center ${learn ? 'bg-gray-100' : bgColorProp()} hover:shadow-2xl hover:duration-700 relative`}>
-        <div className="max-w-fit p-4 m-2 rounded-2xl border-2 border-blue-500 bg-white">
-            <h2
-                className="text-xl font-semibold flex items-center gap-3 cursor-pointer">
-                <HiSpeakerWave onClick={() => pronounceWord(word)} /> {word}
-            </h2>
+    // console.log(dataObj);
+    return (
+        <div
+            className={`my-2 rounded-2xl border-2 border-blue-500 flex flex-row max-sm:flex-col gap-4 px-4 items-center justify-center ${learn ? 'bg-gray-100' : bgColorProp()} hover:shadow-2xl hover:duration-700 relative`}>
+            
+            {/* Word Card left */}
+            <div className="max-w-fit p-4 m-2 rounded-2xl border-2 border-blue-500 bg-white">
+                <h2
+                    className="text-xl font-semibold flex items-center gap-3 cursor-pointer">
+                    <HiSpeakerWave onClick={() => pronounceWord(word, true)} /> {word}
+                </h2>
 
-            <p className='text-center mt-3'>
-                {meaning}
-            </p>
-        </div>
-
-        <div className='py-3'>
-
-            <div className='flex gap-3 items-center'>
-                Difficulty:
-                <div className='text-white'>
-                    <Tags tags={difficulty}>
-                    </Tags>
-                </div>
+                <p className='text-center mt-3'>
+                    {meaning}
+                </p>
             </div>
 
-            <div>
-                Pronunciation: <span className='font-bold'>{pron}</span>
-            </div>
-
-            <div className='flex gap-3 items-center'>
-                Part of Speech:
-                <div className='text-white'>
-                    <Tags tags={pos}>
-                    </Tags>
-                </div>
-            </div>
-
+            {/* Right side description */}
             <div className='py-3'>
-                <button
-                    className='btn btn-primary text-base font-bold uppercase'
-                    onClick={() => openModal(id)}>
-                    When to Say
-                </button>
+
+                <div className='flex gap-3 items-center'>
+                    Difficulty:
+                    <div className='text-white'>
+                        <Tags tags={difficulty}>
+                        </Tags>
+                    </div>
+                </div>
+
+                <div>
+                    Pronunciation: <span className='font-bold'>{pron}</span>
+                </div>
+
+                <div className='flex gap-3 items-center'>
+                    Part of Speech:
+                    <div className='text-white'>
+                        <Tags tags={pos}>
+                        </Tags>
+                    </div>
+                </div>
+
+                <div className='py-3 max-sm:flex max-sm:justify-center'>
+                    <button
+                        className='btn btn-primary text-base font-bold uppercase'
+                        onClick={() => openModal(id)}>
+                        When to Say
+                    </button>
+                </div>
+
             </div>
 
-        </div>
+            {/* Word ID */}
 
-        <div className='absolute left-0 top-0'>
-            <h2 className='text-4xl font-bold opacity-40 rotate-12'>
-                {id.split('u')[1]}
-            </h2>
-        </div>
+            <div className='absolute left-0 top-0'>
+                <h2 className='text-4xl font-bold opacity-40 rotate-12'>
+                    {id.split('u')[1]}
+                </h2>
+            </div>
 
-        <dialog id="open_modal" className="modal backdrop-blur-xs">
-            <div className="modal-box bg-slate-200">
+            {/* Modal Part */}
+            <dialog id="open_modal" className="modal backdrop-blur-xs">
+                <div className="modal-box bg-slate-200">
 
-                <form method="dialog">
-                    {/* if there is a button in form, it will close the modal */}
-                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                </form>
+                    <form method="dialog">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
 
-                <div className='flex flex-col items-center w-full'>
+                    <div className='flex flex-col items-center w-full'>
+                        <div className='flex items-center gap-2'>
+                            <span className='cursor-pointer'>
+                                <HiSpeakerWave onClick={() => pronounceWord(document.getElementById('wId').innerText)} />
+                            </span>
 
-                    <h3 className="font-bold text-lg" id='wId'>
+                            <h3 className="font-bold text-lg" id='wId'>
 
-                    </h3>
+                            </h3>
 
-                    <p className="py-4" id='wMean'>
+                            <h3 className="font-bold text-lg" id='wIdPro'>
 
-                    </p>
+                            </h3>
+                        </div>
 
-                    <div>
-                        When to Say: <span className='font-bold' id='wTs'>
+                        <p className="py-4" id='wMean'>
 
-                        </span>
-                    </div>
+                        </p>
 
-                    <div className='shadow-2xl my-3 border-2 border-amber-50 p-2 rounded-2xl bg-gray-200'>
-                        <div className='flex items-center gap-2 px-2'>
-                            Example:
-                            <span className='font-bold flex items-center gap-2 cursor-pointer' id='ex1st'>
+                        <div>
+                            When to Say: <span className='font-bold' id='wTs'>
 
                             </span>
                         </div>
 
-                        <div className='pt-3 px-2'>
-                            <div>
-                                Pronunciation:
-                                <span className='font-bold ml-2' id='exMid'>
+                        <div className='shadow-2xl my-3 border-2 border-amber-50 p-2 rounded-2xl bg-gray-200'>
+                            <div className='flex items-center gap-2 px-2'>
+                                Example:
+                                <span className='font-bold flex items-center gap-2 cursor-pointer'>
+                                    <HiSpeakerWave onClick={() => pronounceWord(document.getElementById('ex1st').innerText)} />
+                                </span>
+
+                                <span className='font-bold flex items-center gap-2 cursor-pointer' id='ex1st'>
 
                                 </span>
                             </div>
 
-                            <div>
-                                Meaning:
-                                <span className='font-bold' id='exLst'>
+                            <div className='pt-3 px-2'>
+                                <div>
+                                    Pronunciation:
+                                    <span className='font-bold ml-2' id='exMid'>
 
-                                </span>
+                                    </span>
+                                </div>
+
+                                <div>
+                                    Meaning:
+                                    <span className='font-bold' id='exLst'>
+
+                                    </span>
+                                </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
-
-            </div>
-        </dialog>
-    </div>
-);
+            </dialog>
+        </div>
+    );
 };
 
 export default SingleVoc;

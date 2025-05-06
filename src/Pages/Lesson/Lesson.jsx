@@ -19,7 +19,7 @@ const Lesson = () => {
             </Helmet>
 
             {/* Page Title */}
-            <section className='bg-linear-to-br from-blue-800 to-purple-900 py-20'>
+            <section className='bg-linear-to-br from-blue-800 to-purple-900 pb-20 pt-40'>
                 <h2 className='font-extrabold text-white text-xl md:text-2xl lg:text-5xl text-center'>
                     Let's the Learning Journey Begin
                 </h2>

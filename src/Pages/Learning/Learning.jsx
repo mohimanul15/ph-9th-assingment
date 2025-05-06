@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router';
 import Lessons from '../../Layout/Components/Lessons/Lessons';
-import rusflag from '../../assets/image/flagrus.jpg';
 import YouTube from 'react-youtube';
 import { Helmet } from 'react-helmet';
 
@@ -18,15 +17,16 @@ const Learning = () => {
 
     const lesson = useLoaderData();
 
-    console.log(lesson);
+    // console.log(lesson);
 
     return (
         <div>
             <Helmet>
                 <title>Learning | Lingo Bingo</title>
             </Helmet>
+            
             {/* Page Title */}
-            <section className='bg-linear-to-br from-blue-800 to-purple-900 py-20'>
+            <section className='bg-linear-to-br from-blue-800 to-purple-900 pt-40 pb-20'>
                 <h2 className='font-extrabold text-white text-xl md:text-2xl lg:text-5xl text-center'>
                     Let's Start Learning Russian
                 </h2>

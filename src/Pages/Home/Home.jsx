@@ -25,7 +25,7 @@ const Home = () => {
                 <title> Home | Lingo Bingo</title>
             </Helmet>
             
-            <main className='bg-linear-to-br from-blue-600 to-purple-800'>
+            <main className='pt-20 bg-linear-to-br from-blue-600 to-purple-800'>
                 <section className='container mx-auto max-w-7xl space-y-10 md:flex md:gap-10 px-3 py-4 md:py-18'>
 
                     <div className='text-white flex flex-col justify-center text-center md:text-left gap-4 md:gap-12 md:flex-7/12 items-center md:items-baseline'>

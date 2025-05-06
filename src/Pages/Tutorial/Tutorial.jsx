@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import LessonSelect from '../../Layout/Components/LessonSelect/LessonSelect';
 import Video from '../../Layout/Components/Video/Video';
 
@@ -25,7 +25,7 @@ const Tutorial = () => {
                 <title>Tutorial | Lingo Bingo</title>
             </Helmet>
 
-            <section className='bg-linear-to-br from-blue-800 to-purple-900 py-20'>
+            <section className='bg-linear-to-br from-blue-800 to-purple-900 pb-20 pt-40'>
                 <h2 className='font-extrabold text-white text-xl md:text-2xl lg:text-5xl text-center'>
                     Amazing Tutorials
                 </h2>
@@ -51,6 +51,14 @@ const Tutorial = () => {
 
                         <div>
                             <Video dataVid={current}></Video>
+                        </div>
+
+                        <div className='py-4'> 
+                            <Link to={'/lesson/'+current.id}>
+                                <button className='uppercase text-base btn btn-primary'>
+                                    Practice Vocabulary
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

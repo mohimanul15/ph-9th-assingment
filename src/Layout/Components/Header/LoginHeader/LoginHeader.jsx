@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router";
 import Logo from '../../../../assets/logo.png';
 
 const LoginHeader = () => {
-    const { user, signOutAll } = useContext(ApiContext);
+    const { user, signOutAll} = useContext(ApiContext);
 
     const handleSignOut = () => {
         signOutAll();
@@ -23,7 +23,7 @@ const LoginHeader = () => {
     // console.log(user.photoURL);
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="-mb-20 navbar bg-[#FFFFFF40] backdrop-blur-sm z-10 shadow-sm sticky top-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,7 +47,7 @@ const LoginHeader = () => {
                 {
                     user ?
                         <div className="flex items-center gap-3">
-                            <h3>Welcome <span className="font-news font-bold text-main text-lg">{user.displayName.split(' ')[0]}</span></h3>
+                            <h3>Welcome <span className="font-news font-bold text-main text-lg">{user.displayName}</span></h3>
                             <div className="dropdown dropdown-end">
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
