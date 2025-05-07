@@ -36,8 +36,16 @@ const AccountCreated = () => {
     toast.info('User Account Created Successfully. Redirecting to Homepage',warn_toast);
 }
 
-const RemoveFromCartToast = () => {
-    toast.info('Product Removed from Cart',warn_toast);
+const InsertValidNameImage = () => {
+    toast.info('Please Insert Valid Name and PhotoURL',warn_toast);
+}
+
+const ProfileUpdated = () => {
+    toast.success('User Profile Updated . Redirecting to Profile.',warn_toast);
+}
+
+const FirebaseUpdateError = () => {
+    toast.warn('Firebase Update Error. Try again', warn_toast);
 }
 
 export {
@@ -47,5 +55,7 @@ export {
     ProvideAllData,
     InvalidEmail,
     AccountCreated,
-    RemoveFromCartToast
+    InsertValidNameImage,
+    ProfileUpdated,
+    FirebaseUpdateError
 };

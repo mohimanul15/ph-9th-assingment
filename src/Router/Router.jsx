@@ -12,6 +12,8 @@ import Forget from "../Pages/Forget/Forget";
 import Auth from "../Pages/Auth/Auth";
 import Lesson from "../Pages/Lesson/Lesson";
 import Vocab from "../Pages/Vocab/Vocab";
+import Profile from "../Pages/Profile/Profile";
+import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +47,19 @@ const router = createBrowserRouter([
                 path: '/lesson/:lesson_id',
                 loader: () => fetch('/words.json'),
                 element: <Auth><Vocab></Vocab></Auth>
+            },
+            {
+                path: '/profile',
+                children: [
+                    {
+                        path:'/profile',
+                        element:<Auth><Profile></Profile></Auth>,
+                    },
+                    {
+                        path:'/profile/update-profile',
+                        element:<Auth><UpdateProfile></UpdateProfile></Auth>
+                    }
+                ]
             }
         ]
     },

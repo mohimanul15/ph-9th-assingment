@@ -8,6 +8,10 @@ import whyus4 from '../../assets/image/whyus4.png';
 import whyus5 from '../../assets/image/whyus5.png';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 const Home = () => {
 
@@ -19,30 +23,40 @@ const Home = () => {
         e.target.innerText = 'START NOW';
     }
 
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 600,
+            easing: 'ease-in-sine',
+            delay: 200,
+        });
+        AOS.refresh();
+    }, []);
+
     return (
         <div>
             <Helmet>
                 <title> Home | Lingo Bingo</title>
             </Helmet>
-            
+
             <main className='pt-20 bg-linear-to-br from-blue-600 to-purple-800'>
                 <section className='container mx-auto max-w-7xl space-y-10 md:flex md:gap-10 px-3 py-4 md:py-18'>
 
                     <div className='text-white flex flex-col justify-center text-center md:text-left gap-4 md:gap-12 md:flex-7/12 items-center md:items-baseline'>
 
-                        <h1 className='text-xl md:text-3xl lg:text-6xl font-bold tracking-wide'>
+                        <h1 className='text-xl md:text-3xl lg:text-6xl font-bold tracking-wide' data-aos="fade-up">
                             Learning is fun and Easy now with Lingo Bingo
                         </h1>
 
-                        <p className='font-medium text-xs md:text-lg max-w-xl'>
+                        <p className='font-medium text-xs md:text-lg max-w-xl' data-aos="fade-up" data-aos-delay="400">
                             Deep dive into the new way of learning with our dedicated Lessons and videos that makes your learning language easy and fluent. Unlock the power of language with Lingo Bingo—the fun, fast, and effective way to master new words.
                         </p>
 
-                        <button className='btn btn-primary uppercase text-white text-lg font-bold max-w-fit shadow-2xl shadow-blue-300' onMouseEnter={btnHover} onMouseLeave={btnOut}>Start Now</button>
+                        <Link to={'/learning'} data-aos="fade-up" data-aos-delay="600"><button className='btn btn-primary uppercase text-white text-lg font-bold max-w-fit shadow-2xl shadow-blue-300' onMouseEnter={btnHover} onMouseLeave={btnOut}>Start Now</button></Link>
 
                     </div>
 
-                    <div className='md:flex-5/12 flex items-center'>
+                    <div className='md:flex-5/12 flex items-center' data-aos="zoom-in">
                         <img src={heroImg} alt="" />
                     </div>
 
@@ -52,11 +66,11 @@ const Home = () => {
             {/* About section */}
             <section className='container mx-auto max-w-6xl py-8 lg:py-20 flex flex-col md:flex-row max-md:p-4 gap-5'>
 
-                <div className='flex-1/2 max-md:hidden'>
+                <div className='flex-1/2 max-md:hidden' data-aos="fade-right">
                     <img src={aboutImg} alt="About section Image" />
                 </div>
 
-                <div className='flex-1/2 flex flex-col justify-center gap-4'>
+                <div className='flex-1/2 flex flex-col justify-center gap-4' data-aos="fade-left">
                     <h4 className='font-bold text-base md:text-lg uppercase text-neutral-600 text-left max-md:text-center'>About Us</h4>
                     <h2 className='font-extrabold text-black text-xl md:text-2xl lg:text-5xl max-md:text-center'>Master Russian with Confidence</h2>
                     <p className='text-neutral-700 text-xs md:text-lg max-md:text-center max-md:max-w-lg max-md:mx-auto'>Welcome to Lingo Bingo, where we make learning Russian vocabulary effective, engaging, and culturally rich. Founded by language enthusiasts and educators, our mission is to help learners like you unlock the beauty of the Russian language—one word at a time.</p>
@@ -68,22 +82,22 @@ const Home = () => {
             <section className='bg-neutral-50'>
                 <div className='max-w-6xl mx-auto place-items-center py-5 md:py-15 px-4'>
                     <div className='pb-8'>
-                        <h3 className='font-extrabold text-neutral-900 text-lg md:text-2xl lg:text-4xl max-md:text-center'>Why Learn Russian with Lingo Bingo?</h3>
+                        <h3 className='font-extrabold text-neutral-900 text-lg md:text-2xl lg:text-4xl max-md:text-center' data-aos="fade-up">Why Learn Russian with Lingo Bingo?</h3>
                     </div>
 
                     <div className='md:flex py-6'>
-                        <div className='flex-1/2 place-items-center'>
+                        <div className='flex-1/2 place-items-center' data-aos="fade-right">
                             <img src={whyus1} alt="Science based Learning image" />
                         </div>
 
-                        <div className='flex-1/2 flex flex-col justify-center gap-3'>
+                        <div className='flex-1/2 flex flex-col justify-center gap-3' data-aos="fade-up">
                             <h4 className='font-bold text-base md:text-lg uppercase text-neutral-600 text-left max-md:text-center'>Easy Learning</h4>
                             <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-3xl max-md:text-center'>Science-Backed Learning That Sticks</h2>
                             <p className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>Forget cramming! Our method combines spaced repetition, active recall, and gamification to help you retain vocabulary 3x longer. Lessons adapt to your progress, so you spend time on what you need—not generic word lists.</p>
                         </div>
                     </div>
 
-                    <div className='flex py-6 flex-col-reverse md:flex-row'>
+                    <div className='flex py-6 flex-col-reverse md:flex-row' data-aos="fade-right">
                         <div className='flex-1/2 flex flex-col justify-center gap-3'>
                             <h4 className='font-bold text-base md:text-lg uppercase text-neutral-600 text-left max-md:text-center'>Effortless Learning</h4>
                             <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-3xl max-md:text-center'>Pronunciation Made Effortless</h2>
@@ -93,17 +107,17 @@ const Home = () => {
                                 ✔ Voice recording tool to compare your accent</p>
                         </div>
 
-                        <div className='flex-1/2 place-items-center'>
+                        <div className='flex-1/2 place-items-center' data-aos="fade-up">
                             <img src={whyus2} alt="Science based Learning image" />
                         </div>
                     </div>
 
                     <div className='md:flex py-6'>
-                        <div className='flex-1/2 place-items-center'>
+                        <div className='flex-1/2 place-items-center' data-aos="fade-right">
                             <img src={whyus3} alt="Science based Learning image" />
                         </div>
 
-                        <div className='flex-1/2 flex flex-col justify-center gap-3'>
+                        <div className='flex-1/2 flex flex-col justify-center gap-3' data-aos="fade-up">
                             <h4 className='font-bold text-base md:text-lg uppercase text-neutral-600 text-left max-md:text-center'>We Make It Simple</h4>
                             <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-3xl max-md:text-center'>Learn Real Russian, Not Textbook Phrases</h2>
                             <p className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>We teach high-frequency words and cultural nuances you’ll actually: <br />
@@ -118,7 +132,7 @@ const Home = () => {
                     </div>
 
                     <div className='flex py-6 flex-col-reverse md:flex-row'>
-                        <div className='flex-1/2 flex flex-col justify-center gap-3'>
+                        <div className='flex-1/2 flex flex-col justify-center gap-3' data-aos="fade-up" data-aos-delay='400'>
                             <h4 className='font-bold text-base md:text-lg uppercase text-neutral-600 text-left max-md:text-center'>Accent Based</h4>
                             <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-3xl max-md:text-center'>Perfect Your Russian Accent</h2>
                             <div className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>
@@ -134,17 +148,17 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className='flex-1/2 place-items-center'>
+                        <div className='flex-1/2 place-items-center' data-aos="fade-left" data-aos-delay='400'>
                             <img src={whyus4} alt="Science based Learning image" />
                         </div>
                     </div>
 
                     <div className='md:flex py-6'>
-                        <div className='flex-1/2 place-items-center md:place-items-baseline'>
+                        <div className='flex-1/2 place-items-center md:place-items-baseline' data-aos="flip-left" data-aos-delay='600'>
                             <img src={whyus5} alt="Science based Learning image" className='max-md:max-w-3xs' />
                         </div>
 
-                        <div className='flex-1/2 flex flex-col justify-center gap-3'>
+                        <div className='flex-1/2 flex flex-col justify-center gap-3' data-aos="zoom-in-left" data-aos-delay='600'>
                             <h4 className='font-bold text-base md:text-lg uppercase text-neutral-600 text-left max-md:text-center'>Easy Approaches</h4>
                             <h2 className='font-extrabold text-neutral-800 text-lg md:text-xl lg:text-3xl max-md:text-center'>Pronunciation Perfected</h2>
                             <p className='text-neutral-700 text-xs md:text-base max-md:text-center max-md:max-w-lg max-md:mx-auto'>Native Audio Clips: <br />
@@ -156,7 +170,7 @@ const Home = () => {
                                 Record & Compare: Practice speaking and get instant feedback
                             </p>
 
-                            <button className='btn btn-primary uppercase text-white text-lg font-bold max-w-fit shadow-2xl shadow-blue-300 mt-3 max-md:mx-auto'>Let's Start Now</button>
+                            <Link to={'/learning'}><button className='btn btn-primary uppercase text-white text-lg font-bold max-w-fit shadow-2xl shadow-blue-300 mt-3 max-md:mx-auto'>Let's Start Now</button></Link>
 
                         </div>
                     </div>
@@ -327,7 +341,11 @@ const Home = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 
-                    <div className='bg-blue-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-blue-200 hover:shadow-2xl'>
+                    <div
+                        className='bg-blue-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-blue-200 hover:shadow-2xl'
+                        data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
 
                         <div className='min-h-32 relative'>
                             <DotLottieReact
@@ -351,7 +369,12 @@ const Home = () => {
 
                     </div>
 
-                    <div className='bg-slate-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-slate-200 hover:shadow-2xl'>
+                    <div
+                        className='bg-slate-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-slate-200 hover:shadow-2xl'
+                        data-aos="fade-left"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        data-aos-delay='400'>
 
                         <div className='min-h-32 relative'>
                             <DotLottieReact
@@ -375,7 +398,12 @@ const Home = () => {
 
                     </div>
 
-                    <div className='bg-slate-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-slate-200 hover:shadow-2xl'>
+                    <div
+                        className='bg-slate-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-slate-200 hover:shadow-2xl'
+                        data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        data-aos-delay='600'>
 
                         <div className='min-h-32 relative'>
                             <DotLottieReact
@@ -399,7 +427,12 @@ const Home = () => {
 
                     </div>
 
-                    <div className='bg-blue-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-blue-200 hover:shadow-2xl'>
+                    <div
+                        className='bg-blue-200 rounded-2xl p-3 md:p-8 duration-500 hover:shadow-blue-200 hover:shadow-2xl'
+                        data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        data-aos-delay='800'>
 
                         <div className='min-h-32 relative'>
                             <DotLottieReact
@@ -428,7 +461,7 @@ const Home = () => {
                 </div>
 
                 <div className='pt-10 w-full flex justify-center'>
-                    <button className='btn btn-primary uppercase text-white text-lg font-bold max-w-fit shadow-2xl shadow-blue-300 mt-3 max-md:mx-auto'>Let's Start Now</button>
+                    <Link to={'/learning'}><button className='btn btn-primary uppercase text-white text-lg font-bold max-w-fit shadow-2xl shadow-blue-300 mt-3 max-md:mx-auto'>Let's Start Now</button></Link>
                 </div>
             </section>
 
