@@ -2,7 +2,7 @@
 
 **Interactive platform for mastering practical Russian vocabulary through gamified learning**
 
-[![Live Site Here](https://ph-9th-assignment-b10.surge.sh/)]
+[Live Site Here](https://ph-9th-assignment-b10.surge.sh/)
 
 ## 🌟 Purpose
 LingoBingo helps learners acquire essential Russian vocabulary by:
